@@ -1,7 +1,7 @@
 import isObjectLike from "./isObjectLike";
-import getTag from "../internal/getTag";
+import getTag from "../../internal/getTag";
+import {ARGUMENTS_TAG} from "./tags";
 
-const ARGUMENTS_TAG = '[object Arguments]';
 
 /**
  *
