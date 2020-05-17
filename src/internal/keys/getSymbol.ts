@@ -1,0 +1,3 @@
+
+function getSymbol(object) {
+}

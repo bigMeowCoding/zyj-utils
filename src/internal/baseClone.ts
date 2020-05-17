@@ -5,7 +5,11 @@
 import {CopyType} from "../utils/config/copyType";
 import isObject from "../utils/types/isObject";
 import getTag from "./getTag";
-import copyArray from "../utils/copy/deepClone";
+import copyArray from "../utils/copy/copyArray";
+import getAllKeysIn from "./keys/getAllKeysIn";
+import getAllKeys from "./keys/getAllKeys";
+import keysIn from "../utils/keys/keysIn";
+import keys from "../utils/keys/keys";
 
 function initCloneArray<T>(array: (T[] | RegExpExecArray)): T[] {
     const {length} = array;
@@ -31,14 +35,18 @@ function baseClone(value, bitmask: CopyType, key?: string, object?, stack?) {
     if (isArr) {
         result = initCloneArray(value);
         if (!isDeep) {
-            copyArray(value, result);
+            return copyArray(value, result);
         }
     } else {
-
-        console.log('d');
+        console.log('else');
     }
-    return  result;
+    const keysFunc = isFull
+        ? (isFlat ? getAllKeysIn : getAllKeys)
+        : (isFlat ? keysIn : keys);
 
+    const props = isArr ? undefined : keysFunc(value);
+
+    return result;
 }
 
 export default baseClone;
