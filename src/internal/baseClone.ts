@@ -24,9 +24,9 @@ function initCloneArray<T>(array: (T[] | RegExpExecArray)): T[] {
 
 function baseClone(value, bitmask: CopyType, key?: string, object?, stack?) {
     let result = null;
-    const isDeep = bitmask === CopyType.CLONE_DEEP_FLAG;
-    const isFlat = bitmask === CopyType.CLONE_FLAT_FLAG;
-    const isFull = bitmask === CopyType.CLONE_SYMBOLS_FLAG;
+    const isDeep = Boolean(bitmask & CopyType.CLONE_DEEP_FLAG);
+    const isFlat = Boolean(bitmask & CopyType.CLONE_FLAT_FLAG);
+    const isFull = Boolean(bitmask & CopyType.CLONE_SYMBOLS_FLAG);
     // 如果不是对象就直接返回
     if (!isObject(value)) {
         return value;
