@@ -1,7 +1,7 @@
 import baseAssignValue from "../../internal/baseAssignValue";
 import assignValue from "../../internal/assignValue";
 
-function copyObject(source, props: string[], object) {
+function copyObject(source, props: any[], object) {
     const isNew = !object;
     if (isNew) {
         object = {};
