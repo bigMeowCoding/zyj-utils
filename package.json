@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/zhou495248579/exercise/issues"
   },
-  "homepage": "https://github.com/zhou495248579/exercise#readme"
+  "homepage": "https://github.com/zhou495248579/exercise#readme",
+  "dependencies": {
+    "core-js": "^3.6.5"
+  }
 }
