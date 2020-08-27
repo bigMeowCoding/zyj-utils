@@ -1,0 +1,4 @@
+class ListCache {
+    constructor() {
+    }
+}
