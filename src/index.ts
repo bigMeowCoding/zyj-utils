@@ -1,8 +1,5 @@
 // import html from './index.html'
 // import styles from './styles/index.less';
-import baseClone from "./internal/baseClone";
-import './test'
-import {CopyType} from "./utils/config/copyType";
 //
 // console.log(isObjectLike(
 //     {}
