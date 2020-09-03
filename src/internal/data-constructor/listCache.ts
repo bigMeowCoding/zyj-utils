@@ -63,4 +63,8 @@ export default class ListCache {
     this.__data__ = [];
     this.size = 0;
   }
+
+  public len(): number {
+    return this.size;
+  }
 }

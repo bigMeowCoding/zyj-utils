@@ -17,6 +17,7 @@ test("测试set方法", () => {
   list.set("key1", {
     value: "value1",
   });
+  expect(list.len()).toBe(1);
   expect(list.get("key1").value).toBe("value1");
   expect(list.has("key2")).toBeFalsy();
   list.set("key2", {
@@ -24,6 +25,7 @@ test("测试set方法", () => {
   });
   expect(list.get("key2").value).toBe("value2");
   expect(list.get("key3")).toBeUndefined();
+  expect(list.len()).toBe(2);
 });
 
 test("测试has方法", () => {
@@ -43,8 +45,10 @@ test("测试delete方法", () => {
   ];
   const list = new ListCache(arr);
   expect(list.has("key1")).toBeTruthy();
+  expect(list.len()).toBe(2);
   list.delete("key1");
   expect(list.has("key1")).toBeFalsy();
   expect(list.has("key2")).toBeTruthy();
   expect(list.delete("key3")).toBeFalsy();
+  expect(list.len()).toBe(2);
 });
