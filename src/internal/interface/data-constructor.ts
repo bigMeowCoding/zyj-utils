@@ -9,3 +9,4 @@ export interface MapCacheData {
 export type MapCacheListItem = [MapCacheKey, any];
 
 export type MapCacheKey = string | number | boolean | Symbol;
+export type ListCacheItem = [MapCacheKey, any];

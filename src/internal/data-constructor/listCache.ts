@@ -1,6 +1,5 @@
 import { assocIndex } from "./assocIndex";
-
-export type ListCacheItem = [string, any];
+import { ListCacheItem, MapCacheKey } from "../interface/data-constructor";
 
 /**
  * @description 数组对象，每个item是个键值数组
@@ -19,7 +18,7 @@ export default class ListCache {
     }
   }
 
-  public set(key: string, value) {
+  public set(key: MapCacheKey, value) {
     const data = this.__data__;
     const index = assocIndex(data, key);
     if (index >= 0) {
@@ -31,7 +30,7 @@ export default class ListCache {
     return this;
   }
 
-  public get(key: string) {
+  public get(key: MapCacheKey) {
     const data = this.__data__;
     const index = assocIndex(data, key);
     if (index >= 0) {
@@ -44,7 +43,7 @@ export default class ListCache {
   /**
    * @description 删除了key值返回true，其他返回false
    */
-  public delete(key: string): boolean {
+  public delete(key: MapCacheKey): boolean {
     const data = this.__data__;
     const index = assocIndex(data, key);
     if (index >= 0) {
@@ -55,16 +54,19 @@ export default class ListCache {
     }
   }
 
-  public has(key: string): boolean {
+  public has(key: MapCacheKey): boolean {
     return assocIndex(this.__data__, key) >= 0;
   }
 
-  private clear() {
+  public clear() {
     this.__data__ = [];
     this.size = 0;
   }
 
   public len(): number {
     return this.size;
+  }
+  public getData(): ListCacheItem[] {
+    return this.__data__;
   }
 }

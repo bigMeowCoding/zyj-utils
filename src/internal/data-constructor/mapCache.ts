@@ -45,7 +45,7 @@ class MapCache {
     return result;
   }
 
-  private clear() {
+  public clear() {
     this.__data__ = {
       hash: new Hash([]),
       string: new Hash([]),

@@ -1,4 +1,5 @@
-import { ListCacheItem } from "./listCache";
+import { ListCacheItem, MapCacheKey } from "../interface/data-constructor";
+
 const HASH_UNDEFINED = "__lodash_hash_undefined__";
 
 class Hash {
@@ -11,10 +12,10 @@ class Hash {
     }
   }
 
-  public set(key: string, value) {
+  public set(key: MapCacheKey, value) {
     const data = this.__data__;
     this.size += this.has(key) ? 0 : 1;
-    data[key] = value === undefined ? HASH_UNDEFINED : value;
+    data[key as any] = value === undefined ? HASH_UNDEFINED : value;
     return this;
   }
   public get(key: string) {
@@ -34,12 +35,12 @@ class Hash {
     }
   }
 
-  public has(key: string): boolean {
+  public has(key: MapCacheKey): boolean {
     const data = this.__data__;
-    return data[key] !== undefined;
+    return data[key as any] !== undefined;
   }
 
-  private clear() {
+  public clear() {
     this.__data__ = Object.create(null);
     this.size = 0;
   }

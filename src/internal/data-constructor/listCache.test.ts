@@ -1,4 +1,5 @@
-import ListCache, { ListCacheItem } from "./listCache";
+import ListCache from "./listCache";
+import { ListCacheItem } from "../interface/data-constructor";
 
 test("测试构造方法", () => {
   const arr: ListCacheItem[] = [
@@ -26,6 +27,12 @@ test("测试set方法", () => {
   expect(list.get("key2").value).toBe("value2");
   expect(list.get("key3")).toBeUndefined();
   expect(list.len()).toBe(2);
+  list.set(true, "boolean");
+  expect(list.has(true)).toBeTruthy();
+
+  expect(list.get(true)).toBe("boolean");
+  expect(list.delete(true)).toBeTruthy();
+  expect(list.has(true)).toBeFalsy();
 });
 
 test("测试has方法", () => {

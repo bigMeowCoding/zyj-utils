@@ -1,5 +1,5 @@
-import { ListCacheItem } from "./listCache";
 import Hash from "./hash";
+import {ListCacheItem} from "../interface/data-constructor";
 
 test("base", () => {
   const arr: ListCacheItem[] = [

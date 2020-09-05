@@ -1,6 +1,7 @@
 import eq from "../eq";
+import { MapCacheKey } from "../interface/data-constructor";
 
-export function assocIndex(array: any[], key: string): number {
+export function assocIndex(array: any[], key: MapCacheKey): number {
   if (!Array.isArray(array)) {
     return -1;
   }
