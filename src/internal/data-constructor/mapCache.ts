@@ -27,8 +27,9 @@ class MapCache {
 
   public set(key: MapCacheKey, value) {
     const data = getMapData(this, key);
-    this.size += data.has(key as any) ? 0 : 1;
+    const hasData = data.has(key as any);
     data.set(key as any, value);
+    this.size += hasData ? 0 : 1;
     return this;
   }
 
