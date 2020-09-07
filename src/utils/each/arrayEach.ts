@@ -1,13 +1,11 @@
-function arrayEach<T>(array: T[], iterator: Function): T[] {
-    let index = -1;
-    const length = array.length;
+export function arrayEach<T>(array: T[], iterator: Function): T[] {
+  let index = -1;
+  const length = array.length;
 
-    while (++index < length) {
-        if (iterator(array[index], index, array) === false) {
-            break;
-        }
+  while (++index < length) {
+    if (iterator(array[index], index, array) === false) {
+      break;
     }
-    return array;
+  }
+  return array;
 }
-
-export default arrayEach;
