@@ -1,6 +1,8 @@
 /**
  * @description 获取对象自身枚举属性，包含symbol
  */
+import {getSymbols} from "./getSymbols";
+
 function getAllKeys(object): (string | Symbol)[] {
     const result = [];
     result.push(...Object.keys(object));

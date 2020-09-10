@@ -1,7 +1,7 @@
-import Stack from "./stack";
 import ListCache from "./listCache";
 import MapCache from "./mapCache";
 import { ListCacheItem } from "../interface/data-constructor";
+import {Stack} from "./stack";
 
 test("基本功能", () => {
   const arr: ListCacheItem[] = [

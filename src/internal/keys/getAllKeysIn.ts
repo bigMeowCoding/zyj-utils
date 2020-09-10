@@ -2,6 +2,8 @@
  * @description 获取对象本身后继承所有可枚举键值，包括symbol
  *
  */
+import {getSymbolsIn} from "./getSymbolsIn";
+
 function getAllKeysIn(value): (string|Symbol)[] {
     const result = [];
     for (const key of Object.keys(value)) {

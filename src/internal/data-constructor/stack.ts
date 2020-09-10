@@ -2,7 +2,7 @@ import ListCache from "./listCache";
 import MapCache from "./mapCache";
 import { ListCacheItem } from "../interface/data-constructor";
 
-class Stack {
+export class Stack {
   private __data__: ListCache | MapCache = null;
   private size = 0;
   private LARGE_ARRAY_SIZE = 200;
@@ -52,4 +52,3 @@ class Stack {
   }
 }
 
-export default Stack;
