@@ -62,3 +62,41 @@ test("深拷贝环", () => {
   expect(cloneValue.foo.bar.baz.name).toBe("baz");
   expect(cloneValue.foo.bar.baz.aChild).toBeNull();
 });
+
+test("拉平", () => {
+  const obj2 = {
+    key: "inner",
+  };
+  const obj1 = {
+    key: "outer",
+    inner: {
+      key: "inner",
+      inner: {
+        key: "innerinner",
+      },
+    },
+  };
+  const obj = {
+    foo: {
+      name: "foo",
+      bar: {
+        name: "bar",
+        baz: {
+          name: "baz",
+          aChild: null, //待会让它指向obj.foo
+        },
+      },
+    },
+  };
+  Object.setPrototypeOf(obj, {
+    proto: "proto",
+  });
+  const cloneValue = baseClone(
+    obj,
+    CopyType.CLONE_FLAT_FLAG | CopyType.CLONE_DEEP_FLAG
+  );
+  console.log(cloneValue);
+  // expect(cloneValue.foo.bar.name).toBe("bar");
+  // expect(cloneValue.foo.bar.baz.name).toBe("baz");
+  // expect(cloneValue.foo.bar.baz.aChild).toBeNull();
+});
