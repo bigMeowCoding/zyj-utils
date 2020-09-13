@@ -1,5 +1,5 @@
-import eq from "../eq";
 import { MapCacheKey } from "../interface/data-constructor";
+import {eq} from "../utils";
 
 export function assocIndex(array: any[], key: MapCacheKey): number {
   if (!Array.isArray(array)) {

@@ -1,4 +1,4 @@
-import baseClone from "../../internal/baseClone";
+import baseClone from "../../internal/object/baseClone";
 import {CopyType} from "../config/copyType";
 
 export function deepClone(value) {

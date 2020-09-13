@@ -1,6 +1,6 @@
 import isObjectLike from "./isObjectLike";
-import getTag from "../../internal/getTag";
 import {ARGUMENTS_TAG} from "../config/tags";
+import {getTag} from "../../internal/utils";
 
 
 /**

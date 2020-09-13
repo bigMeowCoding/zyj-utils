@@ -1,5 +1,5 @@
-import baseAssignValue from "../../internal/baseAssignValue";
-import assignValue from "../../internal/assignValue";
+import baseAssignValue from "../../internal/object/baseAssignValue";
+import assignValue from "../../internal/object/assignValue";
 
 function copyObject(source, props: any[], object) {
     const isNew = !object;
