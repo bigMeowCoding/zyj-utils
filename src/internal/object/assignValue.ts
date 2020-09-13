@@ -1,5 +1,5 @@
-import eq from "./eq";
 import baseAssignValue from "./baseAssignValue";
+import {eq} from "../utils";
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 

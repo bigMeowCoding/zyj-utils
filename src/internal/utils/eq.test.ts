@@ -1,4 +1,4 @@
-import eq from "./eq";
+import {eq} from "./eq";
 
 test("比较两个对象", () => {
   const o1 = { a: 1 },
@@ -9,6 +9,7 @@ test("比较两个对象", () => {
 
 test("比较对象与值", () => {
   const str = "s",
+      // tslint:disable-next-line:no-construct
     strObject = new String(str);
   expect(eq(strObject, str)).toBeFalsy();
 });
@@ -21,6 +22,7 @@ test("比较两个对象", () => {
 
 test("比较对象与值", () => {
   const str = "s",
+      // tslint:disable-next-line:no-construct
     strObject = new String(str);
   expect(eq(strObject, str)).toBeFalsy();
 });

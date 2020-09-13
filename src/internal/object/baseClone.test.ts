@@ -1,6 +1,6 @@
 import baseClone from "./baseClone";
-import { CopyType } from "../utils/config/copyType";
-import { keys } from "./keys";
+import { CopyType } from "../../utils/config/copyType";
+import { keys } from "../keys";
 
 test("浅拷贝", () => {
   const clone1 = baseClone({ a: 1 }, CopyType.CLONE_SYMBOLS_FLAG);

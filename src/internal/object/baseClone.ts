@@ -1,19 +1,19 @@
-import { CopyType } from "../utils/config/copyType";
-import isObject from "../utils/types/isObject";
-import getTag from "./getTag";
-import copyArray from "../utils/copy/copyArray";
-import getAllKeysIn from "./keys/getAllKeysIn";
-import getAllKeys from "./keys/getAllKeys";
-import { ARGUMENTS_TAG, OBJECT_TAG } from "../utils/config/tags";
+import { CopyType } from "../../utils/config/copyType";
+import isObject from "../../utils/types/isObject";
+import copyArray from "../../utils/copy/copyArray";
+import getAllKeysIn from "../keys/getAllKeysIn";
+import getAllKeys from "../keys/getAllKeys";
+import { ARGUMENTS_TAG, OBJECT_TAG } from "../../utils/config/tags";
 import initCloneObject from "./initCloneObject";
-import copySymbolsIn from "../utils/copy/copySymbolsIn";
-import copyObject from "../utils/copy/copyObject";
-import keysIn from "./keys/keysIn";
-import copySymbols from "../utils/copy/copySymbols";
-import { arrayEach } from "../utils/each";
-import { keys } from "./keys";
+import copySymbolsIn from "../../utils/copy/copySymbolsIn";
+import copyObject from "../../utils/copy/copyObject";
+import keysIn from "../keys/keysIn";
+import copySymbols from "../../utils/copy/copySymbols";
+import { arrayEach } from "../../utils/each";
+import { keys } from "../keys";
 import assignValue from "./assignValue";
-import { Stack } from "./data-constructor/stack";
+import { Stack } from "../data-constructor/stack";
+import { getTag } from "../utils";
 
 /**
  * @private
