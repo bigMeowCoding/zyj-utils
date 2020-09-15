@@ -1,5 +1,4 @@
 import { CopyType } from "../../utils/config/copyType";
-import isObject from "../../utils/types/isObject";
 import copyArray from "../../utils/copy/copyArray";
 import getAllKeysIn from "../keys/getAllKeysIn";
 import getAllKeys from "../keys/getAllKeys";
@@ -14,6 +13,7 @@ import { keys } from "../keys";
 import assignValue from "./assignValue";
 import { Stack } from "../data-constructor/stack";
 import { getTag } from "../utils";
+import {isObject} from "../../utils/types";
 
 /**
  * @private
