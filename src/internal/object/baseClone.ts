@@ -8,7 +8,7 @@ import copySymbolsIn from "../../utils/copy/copySymbolsIn";
 import copyObject from "../../utils/copy/copyObject";
 import keysIn from "../keys/keysIn";
 import copySymbols from "../../utils/copy/copySymbols";
-import { arrayEach } from "../../utils/each";
+import { arrayEach } from "../../utils/array";
 import { keys } from "../keys";
 import assignValue from "./assignValue";
 import { Stack } from "../data-constructor/stack";
