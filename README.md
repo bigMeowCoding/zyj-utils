@@ -1,2 +1,12 @@
-# lodash的mock项目
-仿造lodash的功能，主要用于练习
+# zyj-utils
+
+`zyj-utils`工具库提供开发中最频繁需要的一些功能
+
+## Installation
+
+Using npm:
+
+```shell
+$ npm i -g zyj-utils
+$ npm i zyj-utils
+```
