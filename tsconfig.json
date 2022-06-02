@@ -2,6 +2,8 @@
   "compileOnSave": false,
   "include": ["./src/index.ts"],
   "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
     "baseUrl": "./",
     "outDir": "./dist",
     "allowSyntheticDefaultImports": false,
