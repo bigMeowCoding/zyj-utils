@@ -1,6 +1,6 @@
 {
   "name": "zyj-utils",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
@@ -10,10 +10,10 @@
     "clean": "npx node ./build/clean.js",
     "pub": "npm run build:prod && npm publish"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
-    "dist"
+    "lib"
   ],
   "devDependencies": {
     "@babel/preset-env": "^7.11.0",

@@ -5,7 +5,7 @@
     "strict": true,
     "noImplicitAny": true,
     "baseUrl": "./",
-    "outDir": "./dist",
+    "outDir": "./lib",
     "allowSyntheticDefaultImports": false,
     "sourceMap": true,
     "declaration": true,
