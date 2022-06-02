@@ -1,13 +1,14 @@
 {
-  "name": "lodash-mock",
-  "version": "1.2.0",
+  "name": "zyj-utils",
+  "version": "0.0.0",
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "test": "npx jest",
-    "build": "webpack",
+    "build:prod": "cross-env NODE_ENV=prod webpack",
+    "build:dev": "cross-env NODE_ENV=dev webpack",
     "clean": "npx node ./build/clean.js",
-    "pub": "npm run build && npm publish",
+    "pub": "npm run build:prod && npm publish",
     "lint": "tslint 'src/**/*.ts?(x)'"
   },
   "main": "./dist/index.js",
@@ -23,6 +24,7 @@
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^3.4.2",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",

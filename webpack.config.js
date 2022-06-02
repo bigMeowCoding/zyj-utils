@@ -1,12 +1,12 @@
 const path = require("path"),
   HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-
+const mode = process.env.NODE_ENV === "prod" ? "production" : "development";
 module.exports = {
   entry: {
     app: ["./src/index.ts"],
   },
-  mode: "development",
+  mode,
   resolve: {
     extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
   },
