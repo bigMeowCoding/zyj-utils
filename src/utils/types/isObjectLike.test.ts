@@ -1,4 +1,4 @@
-import isObjectLike from "./isObjectLike";
+import isObjectLike from "../../validate/isObjectLike";
 
 test("isObjectLike object ", () => {
   expect(isObjectLike({})).toBeTruthy();
